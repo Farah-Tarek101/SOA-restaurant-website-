@@ -7,22 +7,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const history = useHistory();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
 
-    // Simulate an API request to authenticate user
-    try {
-      if (email === "user@example.com" && password === "password123") {
-        history.push("/dashboard");
-      } else {
-        setError("Invalid email or password");
-      }
-    } catch (err) {
-      setError("An error occurred during login");
-    }
-  };
+  
 
   return (
     <div className="login-container">
